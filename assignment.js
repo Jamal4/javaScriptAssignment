@@ -9,7 +9,7 @@ function feetToMile(n) {
     return convertFootToMile.toFixed(8);
   }
 }
-let result = feetToMile(0);
+let result = feetToMile(1000);
 console.log("Total: " + result + " Mile");
 
 // problem #2; creating a function to calculate the total volume of a timber required for constructing multiple object
@@ -30,7 +30,7 @@ console.log("Total Wood Required: " + orderQuantity + " m3");
 // problem #3; creating a function to calculate the total brick required for the building
 
 function brickCalculator(numOfFloor) {
-  let n = parseInt(numOfFloor);
+  let n = Math.abs(parseInt(numOfFloor));
   const perFloor_1to10 = 15000;
   const perFloor_11to20 = 12000;
   const perFloor_21above = 10000;
@@ -51,7 +51,7 @@ function brickCalculator(numOfFloor) {
     return totalBrick;
   }
 }
-let buildingHeight = brickCalculator(-10);
+let buildingHeight = brickCalculator(-20);
 console.log(
   "Total Brick: " + buildingHeight + " pcs required for construction."
 );
